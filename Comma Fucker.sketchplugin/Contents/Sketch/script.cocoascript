@@ -1,0 +1,143 @@
+var countWords = function(s) {
+    s = s.replace(/(^\s*)|(\s*$)/gi,"")
+    s = s.replace(/[ ]{2,}/gi," ")
+    s = s.replace(/\n /,"\n")
+    return s.split(' ').length
+}
+
+var layers = function(context) {
+    var doc = context.document
+    var selectedLayers = context.selection
+    var selectedCount = selectedLayers.count()
+    if (selectedCount == 0) {
+        // var artboards = [[doc currentPage] artboards]
+        // if ([artboards count] == 0) {
+            return [[doc currentPage] layers]
+        // }
+        // var layers = []
+        // for (var i = 0; i < [artboards count]; i++) {
+        //    var artboard = [artboards objectAtIndex:i]
+        //    log(artboard.layers())
+        //    for (var j = 0; j < artboard.layers().count(); j++) {
+        //        layers.push([[artboard layers] objectAtIndex:j])
+        //    }
+        //    log(layers)
+        // }
+    } else {
+        return selectedLayers
+    }
+}
+
+var onRun = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        if ([[item class] isEqual:[MSTextLayer class]]) {
+            var string = [item stringValue]
+
+            // Add space after comma
+            item.setStringValue(string.replace(/,/g, ', '))
+
+            // Replace double spaces
+            while (string.match('  ')) {
+                item.setStringValue(string.replace('  ', ' '))
+                string = [item stringValue]
+            }
+            
+            // Replace three dots with ellipsis
+            item.setStringValue(string.replace(/\.\.\./g, '…'))
+            [item adjustFrameToFit]
+        }
+    }
+}
+
+var onMeta = function(context) {
+    var doc = context.document
+    layers = layers(context)
+    var totalWordCount = 0
+    var totalCharacters = 0
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        if ([[item class] isEqual:[MSTextLayer class]]) {
+            var string = [item stringValue]
+            totalWordCount += countWords(string)
+            totalCharacters += string.length()
+        }
+    }
+    [doc showMessage:'Words: ' + totalWordCount + ' / Characters: ' + totalCharacters]
+}
+
+var onUpperCase = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        if ([[item class] isEqual:[MSTextLayer class]]) {
+            var string = [item stringValue]
+            [item setStringValue:string.toUpperCase()]
+            [item adjustFrameToFit]
+        }
+    }
+}
+
+var onLowerCase = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        if ([[item class] isEqual:[MSTextLayer class]]) {
+            var string = [item stringValue]
+            [item setStringValue:string.toLowerCase()]
+            [item adjustFrameToFit]
+        }
+    }
+}
+
+var toTitleCase = function(string){
+  var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
+
+  return string.replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function(match, index, title){
+    if (index > 0 && index + match.length !== title.length &&
+      match.search(smallWords) > -1 && title.charAt(index - 2) !== ":" &&
+      (title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') &&
+      title.charAt(index - 1).search(/[^\s-]/) < 0) {
+      return match.toLowerCase();
+    }
+
+    if (match.substr(1).search(/[A-Z]|\../) > -1) {
+      return match;
+    }
+
+    return match.charAt(0).toUpperCase() + match.substr(1);
+  });
+};
+
+var onTitleCase = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        if ([[item class] isEqual:[MSTextLayer class]]) {
+            var string = [item stringValue]
+            [item setStringValue:toTitleCase(string)]
+            [item adjustFrameToFit]
+        }
+    }
+}
+
+var toSentenceCase = function(string) {
+    var rg = /(^\s*\w{1}|\.\s*\w{1})/gi;
+    string = string.replace(rg, function(toReplace) {
+        return toReplace.toUpperCase();
+    });
+    return string;
+}
+
+var onSentenceCase = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        if ([[item class] isEqual:[MSTextLayer class]]) {
+            var string = [item stringValue]
+            [item setStringValue:toSentenceCase(string)]
+            [item adjustFrameToFit]
+        }
+    }
+}

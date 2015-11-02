@@ -1,0 +1,63 @@
+{
+    "author": "Margus Holland",
+    "commands": [
+        {
+            "script": "script.cocoascript",
+            "handler": "onRun",
+            "shortcut": "ctrl alt cmd f",
+            "name": "Clean up",
+            "identifier": "general"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onUpperCase",
+            "shortcut": "ctrl alt cmd u",
+            "name": "To uppercase",
+            "identifier": "uppercase"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onLowerCase",
+            "shortcut": "ctrl alt cmd l",
+            "name": "To lowercase",
+            "identifier": "lowercase"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onTitleCase",
+            "shortcut": "ctrl alt cmd t",
+            "name": "To title case",
+            "identifier": "titlecase"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onSentenceCase",
+            "shortcut": "ctrl alt cmd s",
+            "name": "To sentence case",
+            "identifier": "sentencecase"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onMeta",
+            "shortcut": "ctrl alt cmd m",
+            "name": "Meta",
+            "identifier": "meta"
+        }
+    ],
+    "menu": {
+        "items": [
+            "general",
+            "uppercase",
+            "lowercase",
+            "titlecase",
+            "sentencecase",
+            "meta"
+        ],
+        "title": "Comma Fucker"
+    },
+    "identifier": "com.margusholland.commafucker",
+    "version": "1.0",
+    "description": "Set of commands to clean up and modify text layers in current page.",
+    "authorEmail": "margusholland@me.com",
+    "name": "Comma Fucker"
+}
