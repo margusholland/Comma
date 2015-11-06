@@ -56,6 +56,13 @@ var removeDoubleSpaces = function(s) {
     return s
 }
 
+var removeDoubleBreaks = function(s) {
+    while (s.match(/\n\n/)) {
+        s = s.replace(/\n\n/, '\n')
+    }
+    return s
+}
+
 var onRun = function(context) {
 }
 
@@ -114,8 +121,8 @@ var onSingleSpaceAfterPunctuation = function(context) {
         var item = [layers objectAtIndex:i]
         var string = [item stringValue]
         string = removeDoubleSpaces(string)
-        string = string.replace(/(,) |(\.) |(\?) |(!) /g, '$1$2$3$4')
-        item.setStringValue(string.replace(/(,|\.|\?|!)/g, '$1 '))
+        string = string.replace(/(,) |(\.) |(\?) |(!) |(:) |(;)/g, '$1$2$3$4$5$6')
+        item.setStringValue(string.replace(/(,|\.|\?|!|;|:)/g, '$1 '))
         moveLayer(item)
     }
 }
@@ -166,6 +173,19 @@ var onSentenceCase = function(context) {
         var item = [layers objectAtIndex:i]
         var string = [item stringValue].toLowerCase()
         [item setStringValue:stringToSentenceCase(string)]
+        moveLayer(item)
+    }
+}
+
+var onDoubleLineBreaks = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        var string = [item stringValue]
+        string = removeDoubleBreaks(string)
+        string = string.replace(/\n\n/g, '\n')
+        string = string.replace(/\n/g, '\n\n')
+        item.setStringValue(string)
         moveLayer(item)
     }
 }

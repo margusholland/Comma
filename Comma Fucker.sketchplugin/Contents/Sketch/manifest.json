@@ -63,6 +63,13 @@
             "shortcut": "ctrl alt cmd d",
             "name": "Remove Double Spaces",
             "identifier": "removedoublespaces"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onDoubleLineBreaks",
+            "shortcut": "ctrl alt cmd b",
+            "name": "Double line breaks",
+            "identifier": "linebreakstoparagraphs"
         }
     ],
     "menu": {
@@ -74,6 +81,7 @@
             "ellipsis",
             "singlespaceafterpuntuation",
             "removedoublespaces",
+            "linebreakstoparagraphs",
             "charcount",
             "wordcount"
         ],
