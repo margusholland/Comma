@@ -3,55 +3,79 @@
     "commands": [
         {
             "script": "script.cocoascript",
-            "handler": "onRun",
-            "shortcut": "ctrl alt cmd f",
-            "name": "Clean up",
-            "identifier": "general"
-        },
-        {
-            "script": "script.cocoascript",
             "handler": "onUpperCase",
             "shortcut": "ctrl alt cmd u",
-            "name": "To uppercase",
+            "name": "Uppercase",
             "identifier": "uppercase"
         },
         {
             "script": "script.cocoascript",
             "handler": "onLowerCase",
             "shortcut": "ctrl alt cmd l",
-            "name": "To lowercase",
+            "name": "Lowercase",
             "identifier": "lowercase"
         },
         {
             "script": "script.cocoascript",
             "handler": "onTitleCase",
             "shortcut": "ctrl alt cmd t",
-            "name": "To title case",
+            "name": "Title case",
             "identifier": "titlecase"
         },
         {
             "script": "script.cocoascript",
             "handler": "onSentenceCase",
             "shortcut": "ctrl alt cmd s",
-            "name": "To sentence case",
+            "name": "Sentence case",
             "identifier": "sentencecase"
         },
         {
             "script": "script.cocoascript",
-            "handler": "onMeta",
-            "shortcut": "ctrl alt cmd m",
-            "name": "Meta",
-            "identifier": "meta"
+            "handler": "onCharCount",
+            "shortcut": "ctrl alt cmd c",
+            "name": "Character count",
+            "identifier": "charcount"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onWordCount",
+            "shortcut": "ctrl alt cmd w",
+            "name": "Word count",
+            "identifier": "wordcount"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onEllipsis",
+            "shortcut": "ctrl alt cmd e",
+            "name": "... to Ellipsis",
+            "identifier": "ellipsis"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onSingleSpaceAfterPunctuation",
+            "shortcut": "ctrl alt cmd p",
+            "name": "Single Space After Punctuation",
+            "identifier": "singlespaceafterpuntuation"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onRemoveDoubleSpaces",
+            "shortcut": "ctrl alt cmd d",
+            "name": "Remove Double Spaces",
+            "identifier": "removedoublespaces"
         }
     ],
     "menu": {
         "items": [
-            "general",
-            "uppercase",
             "lowercase",
+            "uppercase",
             "titlecase",
             "sentencecase",
-            "meta"
+            "ellipsis",
+            "singlespaceafterpuntuation",
+            "removedoublespaces",
+            "charcount",
+            "wordcount"
         ],
         "title": "Comma Fucker"
     },
