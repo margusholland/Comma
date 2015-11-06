@@ -19,35 +19,35 @@
             "script": "script.cocoascript",
             "handler": "onTitleCase",
             "shortcut": "ctrl alt cmd t",
-            "name": "Title case",
+            "name": "Title Case",
             "identifier": "titlecase"
         },
         {
             "script": "script.cocoascript",
             "handler": "onSentenceCase",
             "shortcut": "ctrl alt cmd s",
-            "name": "Sentence case",
+            "name": "Sentence Case",
             "identifier": "sentencecase"
         },
         {
             "script": "script.cocoascript",
             "handler": "onCharCount",
             "shortcut": "ctrl alt cmd c",
-            "name": "Character count",
+            "name": "Character Count",
             "identifier": "charcount"
         },
         {
             "script": "script.cocoascript",
             "handler": "onWordCount",
             "shortcut": "ctrl alt cmd w",
-            "name": "Word count",
+            "name": "Word Count",
             "identifier": "wordcount"
         },
         {
             "script": "script.cocoascript",
             "handler": "onEllipsis",
             "shortcut": "ctrl alt cmd e",
-            "name": "... to Ellipsis",
+            "name": "Three Dots to Ellipsis",
             "identifier": "ellipsis"
         },
         {
@@ -68,7 +68,7 @@
             "script": "script.cocoascript",
             "handler": "onDoubleLineBreaks",
             "shortcut": "ctrl alt cmd b",
-            "name": "Double line breaks",
+            "name": "Double Line Breaks",
             "identifier": "linebreakstoparagraphs"
         }
     ],
