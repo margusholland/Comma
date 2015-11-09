@@ -3,7 +3,8 @@ var layers = function(context) {
     var selectedLayers = context.selection
     var selectedCount = doc.selectedLayersOfClass(MSTextLayer).count()
     if (selectedCount == 0) {
-        return [[doc currentPage] layers]
+        // return [[doc currentPage] layers]
+        [doc showMessage:'Please select at least one text layer']
     } else {
         return doc.selectedLayersOfClass(MSTextLayer)
     }
@@ -185,6 +186,17 @@ var onDoubleLineBreaks = function(context) {
         string = removeDoubleBreaks(string)
         string = string.replace(/\n\n/g, '\n')
         string = string.replace(/\n/g, '\n\n')
+        item.setStringValue(string)
+        moveLayer(item)
+    }
+}
+
+var onSingleLineBreaks = function(context) {
+    layers = layers(context)
+    for (var i=0; i < [layers count]; i++) {
+        var item = [layers objectAtIndex:i]
+        var string = [item stringValue]
+        string = removeDoubleBreaks(string)
         item.setStringValue(string)
         moveLayer(item)
     }

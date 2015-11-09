@@ -67,9 +67,16 @@
         {
             "script": "script.cocoascript",
             "handler": "onDoubleLineBreaks",
-            "shortcut": "ctrl alt cmd b",
+            "shortcut": "ctrl alt cmd m",
             "name": "Double Line Breaks",
             "identifier": "linebreakstoparagraphs"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onSingleLineBreaks",
+            "shortcut": "ctrl alt cmd n",
+            "name": "Single Line Breaks",
+            "identifier": "paragraphstolinebreaks"
         }
     ],
     "menu": {
@@ -78,18 +85,22 @@
             "uppercase",
             "titlecase",
             "sentencecase",
+            "-",
             "ellipsis",
             "singlespaceafterpuntuation",
             "removedoublespaces",
+            "paragraphstolinebreaks",
             "linebreakstoparagraphs",
+            "-",
             "charcount",
             "wordcount"
         ],
-        "title": "Comma Fucker"
+        "title": "Comma, Fucker"
     },
     "identifier": "com.margusholland.commafucker",
     "version": "1.0",
-    "description": "Set of commands to clean up and modify text layers in current page.",
+    "description": "Set of commands to clean up and modify text layers.",
     "authorEmail": "margusholland@me.com",
-    "name": "Comma Fucker"
+    "name": "Comma, Fucker",
+    "compatibleVersion": "3.4"
 }
