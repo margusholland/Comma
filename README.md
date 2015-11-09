@@ -1,5 +1,5 @@
 # Comma, Fucker
-Sketch plugin for text modifications
+Sketch plugin for text modifications.
 
 Select one or multiple text layers to change the text. Following commands are available:
 
