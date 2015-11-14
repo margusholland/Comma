@@ -12,3 +12,11 @@ Select text layers, layer groups or artboards to change the text. Following comm
 * Show character and word counts
 
 <img src="https://s3.amazonaws.com/f.cl.ly/items/1M2Z2D0l3t1T452J0t1M/,.png" alt="Comma, Fucker" width="337">
+
+# Change log
+
+## v2.0 (Smarter selection)
+* You can now select any text tlayer, layer group or artboard and all the text layers in your selection will be changed.
+
+## v1.0
+* Initial public release
