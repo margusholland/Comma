@@ -3,11 +3,32 @@ var layers = function(context) {
     var selectedLayers = context.selection
     var selectedCount = doc.selectedLayersOfClass(MSTextLayer).count()
     if (selectedCount == 0) {
-        // return [[doc currentPage] layers]
-        [doc showMessage:'Please select at least one text layer']
+        var selectedGroups = flatten(selectedLayers)
+        if (selectedGroups.count() > 0) {
+            return selectedGroups
+        } else {
+           [doc showMessage:'Nothing selected']        
+           return [NSArray new] 
+        }
     } else {
         return doc.selectedLayersOfClass(MSTextLayer)
     }
+}
+
+var flatten = function(array) {
+    var flatArray = [NSMutableArray new]
+
+    for (var i = 0; i < array.count(); i++) {
+        var item = [array objectAtIndex:i]
+        if (([item class] == MSLayerGroup || [item class] == MSArtboardGroup) && item.layers().count() > 0) {
+            [flatArray addObjectsFromArray:flatten(item.layers())]
+        } else {
+            if ([item class] == MSTextLayer) {
+                [flatArray addObject:item]
+            }
+        }
+    }
+    return flatArray
 }
 
 var moveLayer = function(layer) {
