@@ -15,7 +15,7 @@ Select text layers, layer groups or artboards to change the text. Following comm
 
 # Change log
 
-## v2.0 (Smarter selection)
+## v1.1 (Smarter selection)
 * You can now select any text tlayer, layer group or artboard and all the text layers in your selection will be changed.
 
 ## v1.0
