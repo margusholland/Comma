@@ -98,9 +98,9 @@
         "title": "Comma"
     },
     "identifier": "com.margusholland.commafucker",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Set of commands to clean up and modify text layers.",
     "authorEmail": "margusholland@me.com",
     "name": "Comma",
-    "compatibleVersion": "3.4"
+    "compatibleVersion": "3.8"
 }
