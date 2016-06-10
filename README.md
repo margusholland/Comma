@@ -15,7 +15,7 @@ Select text layers, layer groups or artboards to change the text. Following comm
 
 # Change log
 
-## v.1.1.2 (Sketch 3.8.X compatibilty)
+## v.1.1.2 (Sketch 3.8.X compatibility)
 * Fixes issues with Sketch 3.8 and later
 
 ## v1.1.1 (SFW name)
