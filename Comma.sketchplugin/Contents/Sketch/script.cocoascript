@@ -1,7 +1,32 @@
+var toJSArray = function(obj) {
+  var l = obj.count()
+  var r = [];
+  for (var i=0; i < l; i++) {
+    r.push(obj.objectAtIndex(i))
+  }
+  return r
+}
+
+var selectedLayersOfClass = function(aClass){
+  if (typeof aClass == 'object') {
+    log('aClass is an object')
+    aClass = '' + aClass.className()
+    log(typeof aClass)
+  }
+  var selection = toJSArray(context.document.selectedLayers())
+    .map(function(item){
+      return item.className() == aClass ? item : null
+    })
+    .filter(function(item) {
+      return item != null
+    })
+  return NSArray.arrayWithArray(selection)
+}
+
 var layers = function(context) {
     var doc = context.document
     var selectedLayers = context.selection
-    var selectedCount = doc.selectedLayersOfClass(MSTextLayer).count()
+    var selectedCount = selectedLayersOfClass(MSTextLayer).count()
     if (selectedCount == 0) {
         var selectedGroups = flatten(selectedLayers)
         if (selectedGroups.count() > 0) {
@@ -11,7 +36,7 @@ var layers = function(context) {
            return [NSArray new] 
         }
     } else {
-        return doc.selectedLayersOfClass(MSTextLayer)
+        return selectedLayersOfClass(MSTextLayer)
     }
 }
 
