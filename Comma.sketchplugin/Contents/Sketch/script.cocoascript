@@ -1,5 +1,5 @@
 var toJSArray = function(obj) {
-    var l = obj.count()
+    var l = obj.count
     var r = [];
     for (var i=0; i < l; i++) {
         r.push(obj.objectAtIndex(i))
@@ -140,21 +140,6 @@ var onRemoveDoubleSpaces = function(context) {
         moveLayer(item)
     }
 }
-
-/* var onCurlyQuotes = function(context) {
-    layers = layers(context)
-    for (var i=0; i < [layers count]; i++) {
-        var item = [layers objectAtIndex:i]
-        if ([[item class] isEqual:[MSTextLayer class]]) {
-            var string = [item stringValue]
-            string = string.replace(/(^\")/gi, '“');
-            string = string.replace(/( \")/gi, ' “');
-            string = string.replace(/\"/g, '”');
-            item.setStringValue(string)
-            moveLayer(item)
-        }
-    }
-} */
 
 var onSingleSpaceAfterPunctuation = function(context) {
     layers = layers(context)

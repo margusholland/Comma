@@ -15,6 +15,10 @@ Select text layers, layer groups or artboards to change the text. Following comm
 
 # Change log
 
+## v.1.1.3 (Sketch 42 compatibility)
+* Fixes issues with Sketch 42
+NB! Might not be backwards compatible, don’t have any earlier version to test on
+
 ## v.1.1.2 (Sketch 3.8.X compatibility)
 * Fixes issues with Sketch 3.8 and later
 
