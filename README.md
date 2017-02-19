@@ -15,6 +15,9 @@ Select text layers, layer groups or artboards to change the text. Following comm
 
 # Change log
 
+## v.1.2 (Symbols)
+* Support for text layers inside symbols, updates the symbol master when an instance is selected
+
 ## v.1.1.3 (Sketch 42 compatibility)
 * Fixes issues with Sketch 42
 NB! Might not be backwards compatible, don’t have any earlier version to test on

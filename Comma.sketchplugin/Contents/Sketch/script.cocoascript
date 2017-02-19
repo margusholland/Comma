@@ -26,8 +26,8 @@ var layers = function(context) {
         if (selectedGroups.count() > 0) {
             return selectedGroups
         } else {
-           [doc showMessage:'Nothing selected']        
-           return [NSArray new] 
+            [doc showMessage:'Nothing selected']        
+            return [NSArray new] 
         }
     } else {
         return selectedLayersOfClass(MSTextLayer, context)
@@ -41,6 +41,8 @@ var flatten = function(array) {
         var item = [array objectAtIndex:i]
         if (([item class] == MSLayerGroup || [item class] == MSArtboardGroup) && item.layers().count() > 0) {
             [flatArray addObjectsFromArray:flatten(item.layers())]
+        } else if ([item class] == MSSymbolInstance && item.symbolMaster().layers().count() > 0) {
+            [flatArray addObjectsFromArray:flatten(item.symbolMaster().layers())]
         } else {
             if ([item class] == MSTextLayer) {
                 [flatArray addObject:item]
