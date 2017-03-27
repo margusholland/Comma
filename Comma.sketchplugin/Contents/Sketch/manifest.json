@@ -3,88 +3,110 @@
     "commands": [
         {
             "script": "script.cocoascript",
-            "handler": "onUpperCase",
-            "shortcut": "ctrl alt cmd u",
-            "name": "Uppercase",
-            "identifier": "uppercase"
-        },
-        {
-            "script": "script.cocoascript",
             "handler": "onLowerCase",
             "shortcut": "ctrl alt cmd l",
+            "identifier": "lowercase",
             "name": "Lowercase",
-            "identifier": "lowercase"
+            "description" : "Convert “This is a text” → “this is a text”",
+            "icon" : "Icons/lowercase.png"
         },
         {
             "script": "script.cocoascript",
-            "handler": "onTitleCase",
-            "shortcut": "ctrl alt cmd t",
-            "name": "Title Case",
-            "identifier": "titlecase"
+            "handler": "onUpperCase",
+            "shortcut": "ctrl alt cmd u",
+            "identifier": "uppercase",
+            "name": "Uppercase",
+            "description" : "Convert “this is a text” → “THIS IS A TEXT”",
+            "icon" : "Icons/uppercase.png"
         },
         {
             "script": "script.cocoascript",
             "handler": "onSentenceCase",
             "shortcut": "ctrl alt cmd s",
-            "name": "Sentence Case",
-            "identifier": "sentencecase"
+            "identifier": "sentencecase",
+            "name": "Sentence",
+            "description" : "Convert “this is a text” → “This is a text”",
+            "icon" : "Icons/sentencecase.png"
         },
         {
             "script": "script.cocoascript",
-            "handler": "onCharCount",
-            "shortcut": "ctrl alt cmd c",
-            "name": "Character Count",
-            "identifier": "charcount"
-        },
-        {
-            "script": "script.cocoascript",
-            "handler": "onWordCount",
-            "shortcut": "ctrl alt cmd w",
-            "name": "Word Count",
-            "identifier": "wordcount"
+            "handler": "onTitleCase",
+            "shortcut": "ctrl alt cmd t",
+            "identifier": "titlecase",
+            "name": "Title",
+            "description" : "Convert “this is a text” → “This Is a Text”",
+            "icon" : "Icons/titlecase.png"
         },
         {
             "script": "script.cocoascript",
             "handler": "onEllipsis",
             "shortcut": "ctrl alt cmd e",
-            "name": "Three Dots to Ellipsis",
-            "identifier": "ellipsis"
+            "identifier": "ellipsis",
+            "name": "Dots to Ellipsis",
+            "description" : "Convert ... to …",
+            "icon" : "Icons/toellipsis.png"
         },
         {
             "script": "script.cocoascript",
             "handler": "onSingleSpaceAfterPunctuation",
             "shortcut": "ctrl alt cmd p",
-            "name": "Single Space After Punctuation",
-            "identifier": "singlespaceafterpuntuation"
+            "identifier": "singlespaceafterpuntuation",
+            "name": "Space After Punctuation",
+            "description" : "Correct space after punctuation to single",
+            "icon" : "Icons/singlepunctunation.png"
         },
         {
             "script": "script.cocoascript",
             "handler": "onRemoveDoubleSpaces",
             "shortcut": "ctrl alt cmd d",
-            "name": "Remove Double Spaces",
-            "identifier": "removedoublespaces"
-        },
-        {
-            "script": "script.cocoascript",
-            "handler": "onDoubleLineBreaks",
-            "shortcut": "ctrl alt cmd m",
-            "name": "Double Line Breaks",
-            "identifier": "linebreakstoparagraphs"
+            "identifier": "removedoublespaces",
+            "name": "Single Space",
+            "description" : "Replace multiple spaces with single",
+            "icon" : "Icons/removedoublespaces.png"
         },
         {
             "script": "script.cocoascript",
             "handler": "onSingleLineBreaks",
             "shortcut": "ctrl alt cmd n",
+            "identifier": "paragraphstolinebreaks",
             "name": "Single Line Breaks",
-            "identifier": "paragraphstolinebreaks"
+            "description" : "Converts all line breaks to single",
+            "icon" : "Icons/singlelinebreaks.png"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onDoubleLineBreaks",
+            "shortcut": "ctrl alt cmd m",
+            "identifier": "linebreakstoparagraphs",
+            "name": "Double Line Breaks",
+            "description" : "Doubles the single line breaks",
+            "icon" : "Icons/doublelinebreaks.png"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onCharCount",
+            "shortcut": "ctrl alt cmd c",
+            "identifier": "charcount",
+            "name": "Character Count",
+            "description" : "Count characters in a selected text layer",
+            "icon" : "Icons/charcount.png"
+        },
+        {
+            "script": "script.cocoascript",
+            "handler": "onWordCount",
+            "shortcut": "ctrl alt cmd w",
+            "identifier": "wordcount",
+            "name": "Word Count",
+            "description" : "Count words in a selected text layer",
+            "icon" : "Icons/wordcount.png"
         }
     ],
     "menu": {
         "items": [
             "lowercase",
             "uppercase",
-            "titlecase",
             "sentencecase",
+            "titlecase",
             "-",
             "ellipsis",
             "singlespaceafterpuntuation",
@@ -98,7 +120,7 @@
         "title": "Comma"
     },
     "identifier": "com.margusholland.commafucker",
-    "version": "1.2",
+    "version": "1.3",
     "description": "Set of commands to clean up and modify text layers.",
     "authorEmail": "margusholland@me.com",
     "name": "Comma",
