@@ -1,0 +1,173 @@
+body {
+    background: #3eb4ff;
+    font-size: 24px;
+    font-family: -apple-system, "Roboto, "sans-serif;
+    font-weight: 300;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.96);
+    padding: 40px;
+}
+#container {
+    border: 0.5px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+p {
+    margin: 0;
+}
+p + p {
+    margin-top: 1em;
+}
+.handle {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.20)
+}
+.handle-top {
+    top: -4px;
+}
+.handle-left {
+    left: -4px;
+}
+.handle-right {
+    right: -4px;
+}
+.handle-bottom {
+    bottom: -4px;
+}
+.handle-middle {
+    top: 50%;
+    margin-top: -4px;
+}
+.handle-center {
+    left: 50%;
+    margin-left: -4px;
+}
+#text-body {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 4px;
+    z-index: 1;
+}
+#content-body {
+    background: #3eb4ff;
+    width: 720px;
+    position: relative;
+    z-index: 2;
+    margin: 72px auto;
+    text-align: center;
+    padding: 48px;
+    box-sizing: border-box;
+}
+h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+    h1 span {
+        font-family: "Libre Baskerville", serif;
+        font-style: italic;
+        text-transform: none;
+        font-weight: 100;
+    }
+h2 {
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.72);
+    font-weight: 600;
+    line-height: 48px;
+    margin: 12px 0 0 0;
+    padding: 0;
+}
+.cta {
+    background: rgba(0, 0, 0, 0.72);
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 20px;
+    height: 56px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 18px 48px;
+    border-radius: 28px;
+}
+.cta:hover {
+    background: rgba(0, 0, 0, 0.88);
+}
+.download-button {
+    margin-top: 48px;
+}
+.center {
+    text-align: center;
+}
+#app-menu {
+    background: #f6f6f6;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.32), 0px -1px 0px rgba(0, 0, 0, 0.08), 0px 1px 0px rgba(0, 0, 0, 0.08);
+    font-size: 19px;
+    line-height: 23px;
+    text-align: left;
+    padding: 0;
+    margin: 88px auto 48px auto;
+    width: 400px;
+    color: #444;
+    font-weight: 400;
+    cursor: default;
+}
+    #app-menu ul {
+        padding: 0;
+        margin: 0;
+    }
+    #app-menu > li + li {
+        border-top: 3px solid #e7e7e7;
+    }
+    #app-menu li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #app-menu .shortcut {
+        float: right;
+        width: 64px;
+        text-align: left;
+    }
+    #app-menu ul li {
+        padding: 1.5px 17px 1.5px 28px;
+    }
+    #app-menu ul > li:first-child {
+        padding-top: 6px;
+    }
+    #app-menu ul > li:last-child {
+        padding-bottom: 6px;
+    }
+.meta {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.24);
+}
+#text-body p.lower {
+    text-transform: lowercase;
+}
+#text-body p.upper {
+    text-transform: uppercase;
+}
+#text-body p.title {
+    text-transform: capitalize;
+}
+#text-body p.sentence {
+    text-transform: initial;
+}
