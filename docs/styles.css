@@ -1,7 +1,7 @@
 body {
     background: #3eb4ff;
     font-size: 24px;
-    font-family: -apple-system, "Roboto, "sans-serif;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "sans-serif";
     font-weight: 300;
     line-height: 32px;
     color: rgba(0, 0, 0, 0.96);
@@ -19,7 +19,7 @@ p {
     margin: 0;
 }
 p + p {
-    margin-top: 1em;
+    margin-top: 12px;
 }
 .handle {
     width: 6px;
@@ -163,6 +163,13 @@ h2 {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.24);
 }
+    .meta a {
+        color: rgba(0, 0, 0, 0.24);
+        text-decoration: none;
+    }
+    .meta a:hover {
+        color: #fff;
+    }
 #text-body p.lower {
     text-transform: lowercase;
 }
