@@ -9,7 +9,11 @@ body {
 }
 #container {
     border: 0.5px solid rgba(0, 0, 0, 0.08);
-    position: relative;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    bottom: 40px;
+    right: 40px;
 }
 p {
     margin: 0;
@@ -61,7 +65,7 @@ p + p {
     width: 720px;
     position: relative;
     z-index: 2;
-    margin: 72px auto;
+    margin: 48px auto;
     text-align: center;
     padding: 48px;
     box-sizing: border-box;
