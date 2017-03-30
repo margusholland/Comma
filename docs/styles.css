@@ -19,7 +19,7 @@ p {
     margin: 0;
 }
 p + p {
-    margin-top: 12px;
+    margin-top: 8px;
 }
 .handle {
     width: 6px;
