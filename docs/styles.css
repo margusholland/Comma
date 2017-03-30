@@ -116,6 +116,9 @@ h2 {
 .center {
     text-align: center;
 }
+.hidden {
+    display: none;
+}
 #app-menu {
     background: #f6f6f6;
     border-radius: 8px;

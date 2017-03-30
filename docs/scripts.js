@@ -19,4 +19,26 @@ $(function() {
     }, function() {
         $('#text-body p').removeClass('sentence')
     });
+    $('.tosingleline').hover(function() {
+        $('#text-body p.empty').addClass('hidden')
+    }, function() {
+        $('#text-body p.empty').removeClass('hidden')
+    });
+    $('.toellipsis').hover(function() {
+        $('#text-body .dots').addClass('hidden')
+        $('#text-body .ellipsis').removeClass('hidden')
+    }, function() {
+        $('#text-body .dots').removeClass('hidden')
+        $('#text-body .ellipsis').addClass('hidden')
+    });
+    $('.toperiodspace').hover(function() {
+        $('#text-body .space').removeClass('hidden')
+    }, function() {
+        $('#text-body .space').addClass('hidden')
+    });
+    $('.tosinglespace').hover(function() {
+        $('#text-body .multispace').addClass('hidden')
+    }, function() {
+        $('#text-body .multispace').removeClass('hidden')
+    });
 });
