@@ -36,7 +36,7 @@ Select text layers, layer groups or artboards to change the text. Following comm
 * Changed to name to a more workplace friendly version
 
 ### 1.1
-* You can now select any text layer, layer group or artboard and all the text layers in your selection will be changed.
+* You can now select any text layer, layer group or artboard and all the text layers in your selection will be changed
 
 ### 1.0
 * Initial public release
