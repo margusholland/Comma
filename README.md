@@ -1,5 +1,6 @@
 # Comma
-Sketch plugin for text modifications.
+
+<img src="https://d3uepj124s5rcx.cloudfront.net/items/2735130t060F0W1B3c2M/comma.png?v=e9c84628">
 
 Select text layers, layer groups or artboards to change the text. Following commands are available:
 
@@ -15,20 +16,18 @@ Select text layers, layer groups or artboards to change the text. Following comm
   <img src="http://sketchrunner.com/img/badge_white.png" width="160">
 </a>
 
-<img src="https://s3.amazonaws.com/f.cl.ly/items/1M2Z2D0l3t1T452J0t1M/,.png" alt="Comma" width="337">
 
 ## Change log
 
 ### 1.3
-* Support for Sketch Runner
-* Simpler names for menu items (update your custom shortcuts!)
+* Support for <a href="http://sketchrunner.com">Sketch Runner</a>
+* Simpler names for menu items (make sure to update your custom shortcuts)
 
 ### 1.2
 * Support for text layers inside symbols, updates the symbol master when an instance is selected
 
 ### 1.1.3
 * Fixes issues with Sketch 42
-NB! Might not be backwards compatible, don’t have any earlier version to test on
 
 ### 1.1.2
 * Fixes issues with Sketch 3.8 and later
@@ -41,3 +40,6 @@ NB! Might not be backwards compatible, don’t have any earlier version to test 
 
 ### 1.0
 * Initial public release
+
+
+
