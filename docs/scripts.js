@@ -41,4 +41,11 @@ $(function() {
     }, function() {
         $('#text-body .multispace').removeClass('hidden')
     });
+    $('.tocount').hover(function() {
+        $(this).find('.action').addClass('hidden')
+        $(this).find('.count').removeClass('hidden')
+    }, function() {
+        $(this).find('.action').removeClass('hidden')
+        $(this).find('.count').addClass('hidden')
+    });
 });

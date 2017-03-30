@@ -69,6 +69,7 @@ p + p {
     text-align: center;
     padding: 48px;
     box-sizing: border-box;
+    border-radius: 16px;
 }
 h1 {
     color: #fff;
