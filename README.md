@@ -1,6 +1,6 @@
 # Comma
 
-<img src="https://d3uepj124s5rcx.cloudfront.net/items/2735130t060F0W1B3c2M/comma.png?v=e9c84628">
+<img src="https://d3uepj124s5rcx.cloudfront.net/items/2H111A0F002n3u1g2n0d/comma.png">
 
 Select text layers, layer groups or artboards to change the text. Following commands are available:
 
@@ -9,7 +9,6 @@ Select text layers, layer groups or artboards to change the text. Following comm
 * Add a single space after every punctuation character (.,?!:;)
 * Replace all double spaces with single spaces
 * Replace all double line breaks with single line breaks
-* Replace all single line breaks with double line breaks (paragraph style)
 * Show character and word counts
 
 <a href="http://bit.ly/SketchRunnerWebsite">
@@ -18,6 +17,9 @@ Select text layers, layer groups or artboards to change the text. Following comm
 
 
 ## Change log
+
+### 1.3.1
+* Icons for Sketch Runner
 
 ### 1.3
 * Support for <a href="http://sketchrunner.com">Sketch Runner</a>
