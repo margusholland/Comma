@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Comma for Sketch</title>
+    <link>https://raw.githubusercontent.com/margusholland/Comma/sketch-updater/comma-plugin-appcast.xml</link>
+    <description>For those caring about text.</description>
+    <language>en</language>
+      <item>
+        <title>Version 1.3.1</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>Icons for Sketch Runner</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="https://github.com/margusholland/Comma/archive/v.1.3.1.zip" sparkle:version="1.3.1" />
+      </item>
+      <item>
+        <title>Version 1.3.2</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>Support for Sketch v45 update mechanism</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="http://www.uo.ee/v.1.3.2.zip" sparkle:version="1.3.2" />
+      </item>
+  </channel>
+</rss>
