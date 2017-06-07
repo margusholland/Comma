@@ -18,6 +18,9 @@ Select text layers, layer groups or artboards to change the text. Following comm
 
 ## Change log
 
+### 1.3.2
+* Support for Sketch v45 update mechanism
+
 ### 1.3.1
 * Icons for Sketch Runner
 
