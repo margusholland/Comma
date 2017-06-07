@@ -120,8 +120,8 @@
         "title": "Comma"
     },
     "identifier": "com.margusholland.commafucker",
-    "version": "1.3.1",
-    "appcast": "https://raw.githubusercontent.com/margusholland/Comma/sketch-updater/comma-plugin-appcast.xml",
+    "version": "1.3.2",
+    "appcast": "https://raw.githubusercontent.com/margusholland/Comma/master/comma-plugin-appcast.xml",
     "description": "Set of commands to clean up and modify text layers.",
     "authorEmail": "margusholland@me.com",
     "name": "Comma",
