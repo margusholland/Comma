@@ -8,7 +8,7 @@
             "identifier": "replacetext",
             "name": "Replace text",
             "description" : "Replace text",
-            "icon" : "Icons/replace.png"
+            "icon" : "Icons/replacetext.png"
         },
         {
             "script": "script.cocoascript",
@@ -112,13 +112,12 @@
     ],
     "menu": {
         "items": [
-            "replacetext",
-            "-",
             "lowercase",
             "uppercase",
             "sentencecase",
             "titlecase",
             "-",
+            "replacetext",
             "ellipsis",
             "singlespaceafterpuntuation",
             "removedoublespaces",
