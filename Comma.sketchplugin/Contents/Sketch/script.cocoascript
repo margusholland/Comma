@@ -26,7 +26,7 @@ var layers = function(context) {
         if (selectedGroups.count() > 0) {
             return selectedGroups
         } else {
-            [doc showMessage:'Nothing selected']        
+            [doc showMessage:'Nothing selected']
             return [NSArray new] 
         }
     } else {
@@ -226,5 +226,40 @@ var onSingleLineBreaks = function(context) {
         string = removeDoubleBreaks(string)
         item.setStringValue(string)
         moveLayer(item)
+    }
+}
+
+var getUserTextInput = function() {
+    var alertView = COSAlertWindow.new()
+    var textField = NSTextField.alloc().initWithFrame(NSMakeRect(0,0,296,24))
+
+    alertView.setMessageText('Replace text in selected layers with');
+    textField.setStringValue('')
+    alertView.addAccessoryView(textField)
+    alertView.alert().window().setInitialFirstResponder(textField)
+    alertView.addButtonWithTitle('Replace')
+    alertView.addButtonWithTitle('Cancel')
+
+    return {
+        button: alertView.runModal(),
+        text: textField.stringValue()
+    };
+}
+
+var onReplaceText = function(context) {
+    var doc = context.document
+    layers = layers(context)
+    var userInput = getUserTextInput()
+    var replacedText = userInput.text.trim()
+    if (userInput.button === 1000) {
+        if (replacedText.length > 0) {
+            for (var i=0; i < [layers count]; i++) {
+                var item = [layers objectAtIndex:i]
+                item.setStringValue(replacedText)
+                item.setName(replacedText)
+           }
+        } else {
+           [doc showMessage:'Text can’t be blank']
+        }
     }
 }

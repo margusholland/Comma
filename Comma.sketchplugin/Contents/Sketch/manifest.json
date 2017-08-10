@@ -3,6 +3,15 @@
     "commands": [
         {
             "script": "script.cocoascript",
+            "handler": "onReplaceText",
+            "shortcut": "ctrl alt cmd r",
+            "identifier": "replacetext",
+            "name": "Replace text",
+            "description" : "Replace text",
+            "icon" : "Icons/replace.png"
+        },
+        {
+            "script": "script.cocoascript",
             "handler": "onLowerCase",
             "shortcut": "ctrl alt cmd l",
             "identifier": "lowercase",
@@ -103,6 +112,8 @@
     ],
     "menu": {
         "items": [
+            "replacetext",
+            "-",
             "lowercase",
             "uppercase",
             "sentencecase",
@@ -120,7 +131,7 @@
         "title": "Comma"
     },
     "identifier": "com.margusholland.commafucker",
-    "version": "1.3.2",
+    "version": "1.4",
     "appcast": "https://raw.githubusercontent.com/margusholland/Comma/master/comma-plugin-appcast.xml",
     "description": "Set of commands to clean up and modify text layers.",
     "authorEmail": "margusholland@me.com",
