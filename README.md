@@ -1,6 +1,6 @@
 # Comma
 
-<img src="http://uo.ee/comma/comma.png">
+<img src="http://uo.ee/comma/comma-v1.4.png">
 
 Select text layers, layer groups or artboards to change the text. Following commands are available:
 
