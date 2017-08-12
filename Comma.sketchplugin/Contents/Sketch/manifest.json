@@ -6,8 +6,8 @@
             "handler": "onReplaceText",
             "shortcut": "ctrl alt cmd r",
             "identifier": "replacetext",
-            "name": "Replace text",
-            "description" : "Replace text",
+            "name": "Replace Text",
+            "description" : "Replace text in selected layers",
             "icon" : "Icons/replacetext.png"
         },
         {
