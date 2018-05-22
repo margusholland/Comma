@@ -6,6 +6,17 @@
     <description>For those caring about text.</description>
     <language>en</language>
       <item>
+        <title>Version 1.4.1</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>Plugin Icon added</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="https://raw.githubusercontent.com/margusholland/Comma/master/versions/v.1.4.1.zip" sparkle:version="1.4.1" />
+      </item>
+      <item>
         <title>Version 1.4</title>
         <description>
           <![CDATA[
